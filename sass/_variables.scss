@@ -1,0 +1,63 @@
+// Fonts
+@font-face {
+  font-family: 'exo-thin';
+  src:url('../fonts/exo/Exo-Thin.otf') format('woff');
+}
+
+@font-face {
+  font-family: 'exo-light';
+  src:url('../fonts/exo/Exo-Light.otf') format('woff');
+}
+@font-face {
+  font-family: 'exo-bold';
+  src:url('../fonts/exo/Exo-Bold.otf') format('woff');
+}
+@font-face {
+  font-family: 'exo-italic';
+  src:url('../fonts/exo/Exo-ThinItalic.otf') format('woff');
+}
+@font-face {
+  font-family: 'fontAwesome';
+  src:url('../fonts/fontawesome-webfont.woff') format('woff');
+}
+
+$thinFont:  'exo-thin', sans-serif;
+$lightFont:  'exo-light', sans-serif;
+$boldFont:  'exo-bold', sans-serif;
+$italicFont:  'exo-italic', sans-serif;
+$awesomeFont:  'fontAwesome', sans-serif;
+
+// colors
+$colors: (
+        light: #fbfbfb,
+        dark: #000,
+        gray: #a2a3a7,
+        blue: #00BFFF,
+        orange: #F4C748,
+);
+
+.uppercase{
+  text-transform: uppercase;
+}
+
+//Space between columns
+$gutter: 5px;
+
+// columns for grid
+@mixin grid($column-number) {
+  @for $i from 1 through $column-number {
+    .col-#{$i} {
+      //we determine width of column
+      width: 100% / $column-number * $i;
+    }
+  }
+}
+
+//clear floats
+%clearfix {
+  &:before, &:after{
+    content: "";
+    display: table;
+    clear: both
+  }
+}

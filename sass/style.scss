@@ -1,0 +1,13 @@
+@import "_reset";
+@import "_variables";
+
+body {
+  font-family: $lightFont;
+  color: map_get($colors, dark);
+  font-size: 15px;
+}
+
+.socialbtns, .amenities{
+    font-family: $awesomeFont;
+}
+
