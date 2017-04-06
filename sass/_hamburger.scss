@@ -1,0 +1,36 @@
+// Hamburger menu
+
+.hamburger{
+  background: transparent;
+  border: none;
+  float: right;
+  padding: 8px 5px;
+  z-index: 10;
+
+  .line {
+    background-color: white;
+    height: 1px;
+    width: 23px;
+    display: block;
+    border-radius: 5px;
+    transition: all .2s ease-in;
+  }
+
+  .lineBetween {
+    margin: 6px 0 6px 4px;
+  }
+
+  &:hover{
+    .line{
+      background-color: map_get($colors, blue);
+    }
+    .lineBetween {
+      margin-left: -4px;
+      background-color: white;
+    }
+  }
+  &:focus{
+    outline: 0;
+    box-shadow: none;
+  }
+}
